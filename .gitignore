@@ -1,16 +1,29 @@
-# Compiled class file
+# Ignore compiled class files
 *.class
 
-# Log file
+# Ignore JVM crash logs
+hs_err_pid*
+
+# Ignore log files
 *.log
 
-# BlueJ files
+# Ignore temporary files created by the IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore BlueJ project files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Ignore files created by Java Mobile Tools (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Ignore Maven, Gradle, and other build-related files
+target/
+build/
+
+# Ignore package files
 *.jar
 *.war
 *.nar
@@ -19,6 +32,36 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Ignore .out files (output logs, for example)
+*.out
+
+# Ignore file system lock files
+*.lock
+
+# Ignore temporary files and backups
+*~
+*.swp
+*.swo
+
+# Ignore NetBeans project files
+nbproject/
+
+# Ignore Eclipse project files
+.project
+.classpath
+.settings/
+
+# Ignore VS Code project files
+.vscode/
+
+# Ignore MacOS-specific files
+.DS_Store
+
+# Ignore Windows-specific files
+Thumbs.db
+
+# Ignore temporary directories created by build tools (e.g., Gradle, Maven)
+.gradle/
+
+# Specifically ignore .iml files inside .idea directory
+.idea/*.iml
