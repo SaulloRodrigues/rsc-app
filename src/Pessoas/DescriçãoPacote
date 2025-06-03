@@ -1,0 +1,6 @@
+Esse pacote se refere as pessoas envolvidas no sistema e em seus cadastros.
+
+A classe Usuario é a classe principal no sistema , pois é ela que indicará quais funcionalidades deverão ser executadas.
+A classe Idosa e ProfissionalSaude já são auto explicativas.
+Todas aas classes são filhas de CadastroPessoas, pois antes de entrarem no sistema, devem ser cadastradas, mas é claro
+cada uma possue suas especificações.
