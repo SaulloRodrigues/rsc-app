@@ -4,9 +4,10 @@ import Pessoas.Idosas;
 
 import java.time.LocalDate;
 import java.util.Scanner;
+import Pessoas.vericacao_Dados.verificarCPF;
 
 //Os logs e Scannersservem apenas para testar os métodos e devem ser excluídos ao implementar o front
-public class CadastroIdosaService implements CadastroService{
+public class CadastroIdosaService implements CadastroService {
 
     @Override
     public Idosas cadastrar() {
@@ -23,7 +24,7 @@ public class CadastroIdosaService implements CadastroService{
 
         Scanner scan = new Scanner(System.in);
 
-        try{
+        try {
 
             System.out.println("Primeiro Nome : ");
             primeiroNomeIdosa = scan.next();
@@ -31,9 +32,22 @@ public class CadastroIdosaService implements CadastroService{
             System.out.println("Ultimo Nome : ");
             ultimoNomeIdosa = scan.next();
 
-            System.out.println("CPF : ");
-            cpfIdosa = scan.next();
-            //TODO validação CPF
+            while (true) {
+                System.out.println("CPF : ");
+                cpfIdosa = scan.next();
+                try {
+                    if (verificarCPF.validarCPF(cpfIdosa)) {
+                        System.out.println("CPF válido 👍");
+                        break; // CPF válido, sai do loop
+                    }
+                } catch(IllegalArgumentException e){
+                    System.out.println("Erro: " + e.getMessage());
+                } catch (Exception e) {
+                    System.out.println("Erro: " + e.getMessage());
+                }
+            }
+
+            // TODO validação CPF
 
             System.out.println("Dia Nascimento  : ");
             diaNascimento = scan.nextInt();
@@ -50,9 +64,9 @@ public class CadastroIdosaService implements CadastroService{
             System.out.println("cartao Sus : ");
             cartaoSUS = scan.next();
 
-            return new Idosas(primeiroNomeIdosa, ultimoNomeIdosa, cpfIdosa, diaNascimento, mesNascimento, anoNascimento, nomeMae, cartaoSUS);
-        }
-        catch (java.util.NoSuchElementException e) {
+            return new Idosas(primeiroNomeIdosa, ultimoNomeIdosa, cpfIdosa, diaNascimento, mesNascimento, anoNascimento,
+                    nomeMae, cartaoSUS);
+        } catch (java.util.NoSuchElementException e) {
 
             System.out.println("Entrada inesperada , tente novamente");
 
@@ -63,7 +77,7 @@ public class CadastroIdosaService implements CadastroService{
 
         finally {
 
-            if (scan != null){
+            if (scan != null) {
                 scan.close();
             }
         }
