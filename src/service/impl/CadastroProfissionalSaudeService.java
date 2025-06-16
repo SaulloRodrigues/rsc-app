@@ -1,10 +1,9 @@
 package service.impl;
 
 import java.util.Scanner;
-import java.util.UUID;
 
-import domain.entity.CadastroService;
-import domain.entity.ProfissionalSaude;
+import domain.entity.Interfaces.CadastroService;
+import domain.entity.Pessoas.ProfissionalSaude;
 
 //Os logs e Scannersservem apenas para testar os métodos e devem ser excluídos ao implementar o front
 public class CadastroProfissionalSaudeService implements CadastroService{

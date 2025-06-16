@@ -1,6 +1,6 @@
 package service.impl;
-import domain.entity.CadastroService;
-import domain.entity.Idosas;
+import domain.entity.Interfaces.CadastroService;
+import domain.entity.Pessoas.Idosas;
 
 import java.time.LocalDate;
 import java.util.Scanner;

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-import domain.entity.Internacao;
+import domain.entity.Procedimentos.Internacao;
 
 public class CadastroInternacaoService {
     public void cadastrar() {

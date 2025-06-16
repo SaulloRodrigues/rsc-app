@@ -1,8 +1,8 @@
 package repository.impl;
 
 import config.ConnectionFactory;
-import domain.entity.UsuarioSistema;
-import repository.UsuarioSistemaRepository;
+import domain.entity.Pessoas.UsuarioSistema;
+import repository.Interfaces.UsuarioSistemaRepository;
 
 import java.sql.*;
 import java.util.ArrayList;

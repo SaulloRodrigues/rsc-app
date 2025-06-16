@@ -1,8 +1,8 @@
 package service.impl;
 
-import domain.entity.UsuarioSistema;
-import repository.UsuarioSistemaRepository;
-import service.UsuarioSistemaService;
+import domain.entity.Pessoas.UsuarioSistema;
+import repository.Interfaces.UsuarioSistemaRepository;
+import service.Interface.UsuarioSistemaService;
 
 import java.util.List;
 import java.util.UUID;

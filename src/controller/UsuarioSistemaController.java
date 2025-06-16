@@ -1,8 +1,8 @@
 package controller;
 
-import domain.entity.UsuarioSistema;
+import domain.entity.Pessoas.UsuarioSistema;
 import repository.impl.UsuarioSistemaRepositoryImpl;
-import service.UsuarioSistemaService;
+import service.Interface.UsuarioSistemaService;
 import service.impl.UsuarioSistemaServiceImpl;
 
 import java.util.List;
